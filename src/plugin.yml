@@ -1,0 +1,10 @@
+name: PVPManager
+main: com.ttaylorr.uhc.pvp.PVPManager
+version: 1.0
+commands:
+    pvp:
+        description: Enter the arena for PVP!
+        usage: /pvp
+    leavepvp:
+        description: Leave the arena
+        usage: /leavepvp
