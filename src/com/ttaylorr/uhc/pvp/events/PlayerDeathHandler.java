@@ -3,6 +3,7 @@ package com.ttaylorr.uhc.pvp.events;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.potion.Potion;
@@ -10,7 +11,7 @@ import org.bukkit.potion.PotionType;
 
 public class PlayerDeathHandler implements Listener {
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onPlayerDeath(PlayerDeathEvent event) {
 		if (event.getEntity() != null) {
 			if(event.getEntity().hasMetadata("UHC_PVP")) {
