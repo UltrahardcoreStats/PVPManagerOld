@@ -13,32 +13,25 @@ import org.bukkit.inventory.ItemStack;
 
 public class ArmorKit {
 
-	static ItemStack[] armor = new ItemStack[4];
-	static ItemStack[] items = new ItemStack[4];
+	static ItemStack[] armor;
+	static ItemStack[] items;
 	static ArrayList<Location> coordinates = new ArrayList<Location>();
 	
 	static {
-		ItemStack helmet = new ItemStack(Material.IRON_HELMET, 1);
-		helmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
-		helmet.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
-		armor[3] = helmet;
+		
+		armor = new ItemStack[4];
+		items = new ItemStack[4];
 
-		ItemStack chestplate = new ItemStack(Material.IRON_CHESTPLATE, 1);
-		chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
-		chestplate.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
-		armor[2] = chestplate;
+		armor[3] = new ItemStack(Material.IRON_HELMET, 1);
+		armor[2] = new ItemStack(Material.IRON_CHESTPLATE, 1);
+		armor[1] = new ItemStack(Material.IRON_LEGGINGS, 1);
+		armor[0] = new ItemStack(Material.IRON_BOOTS, 1);
 
-		ItemStack leggings = new ItemStack(Material.IRON_LEGGINGS, 1);
-		leggings.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
-		leggings.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
-		armor[1] = leggings;
+		for(ItemStack stack : armor) {
+			stack.addEnchantment(Enchantment.PROTECTION_ALL,1);
+			stack.addUnsafeEnchantment(Enchantment.DURABILITY,10);
+		}
 
-		ItemStack boots = new ItemStack(Material.IRON_BOOTS, 1);
-		boots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
-		boots.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
-		boots.addEnchantment(Enchantment.PROTECTION_FALL, 2);
-		armor[0] = boots;
-	
 		ItemStack sword = new ItemStack(Material.IRON_SWORD, 1);
 		sword.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 		sword.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
