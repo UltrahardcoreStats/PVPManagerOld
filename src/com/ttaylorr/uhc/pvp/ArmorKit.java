@@ -13,11 +13,11 @@ import org.bukkit.inventory.ItemStack;
 
 public class ArmorKit {
 
-	ItemStack[] armor = new ItemStack[4];
-	ItemStack[] items = new ItemStack[4];
-	ArrayList<Location> coordinates = new ArrayList<Location>();
+	static ItemStack[] armor = new ItemStack[4];
+	static ItemStack[] items = new ItemStack[4];
+	static ArrayList<Location> coordinates = new ArrayList<Location>();
 	
-	public ArmorKit() {
+	static {
 		ItemStack helmet = new ItemStack(Material.IRON_HELMET, 1);
 		helmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
 		helmet.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
