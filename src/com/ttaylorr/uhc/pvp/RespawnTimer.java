@@ -34,13 +34,11 @@ public class RespawnTimer implements Runnable {
 				Bukkit.getScheduler().runTaskLater(PVPManager.getInstance(), new RespawnTimer(this.player, this.time - 1, this.respawning), 20L);
 			} else {
 
-				ArmorKit kit = new ArmorKit();
-
-				kit.applyKit(this.player);
+				PVPManager.getArmorKit().applyKit(this.player);
 
 				Location l = null;
 				while (l == null) {
-					l = kit.getRandomLocation();
+					l = PVPManager.getArmorKit().getRandomLocation();
 
 					if (l != null) {
 						this.player.teleport(l);
