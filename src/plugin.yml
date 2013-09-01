@@ -1,6 +1,6 @@
 name: PVPManager
 main: com.ttaylorr.uhc.pvp.PVPManager
-version: 1.0
+version: 1.1
 commands:
     pvp:
         description: Enter the arena for PVP!

@@ -28,7 +28,7 @@ public class ArmorKit {
 		armor[0] = new ItemStack(Material.IRON_BOOTS, 1);
 
 		for(ItemStack stack : armor) {
-			stack.addEnchantment(Enchantment.PROTECTION_ALL,1);
+			stack.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL,1);
 			stack.addUnsafeEnchantment(Enchantment.DURABILITY,10);
 		}
 
