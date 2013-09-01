@@ -11,6 +11,7 @@ import com.ttaylorr.uhc.pvp.events.PlayerRespawnHandler;
 public class PVPManager extends JavaPlugin {
 
 	private static PVPManager instance;
+	private static ArmorKit kit;
 	
 	@Override
 	public void onDisable() {
@@ -20,6 +21,7 @@ public class PVPManager extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		instance = this;
+		kit = new ArmorKit();
 		
 		getCommand("pvp").setExecutor(new PVPCommandHandler(this));
 		getCommand("leavepvp").setExecutor(new LeavePVPCommandHandler(this));
@@ -30,6 +32,10 @@ public class PVPManager extends JavaPlugin {
 	
 	public static PVPManager getInstance() {
 		return instance;
+	}
+	
+	public static ArmorKit getArmorKit() {
+		return kit;
 	}
 	
 }
