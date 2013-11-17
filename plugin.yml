@@ -1,0 +1,8 @@
+name: PVPManager
+version: 1.0
+main: com.ttaylorr.uhc.pvpmanager.PVPManager
+depend: [WorldGuard, WorldEdit]
+commands:
+    pvp:
+        description: Enters you into PVP.
+        usage: /pvp <enter|exit>
