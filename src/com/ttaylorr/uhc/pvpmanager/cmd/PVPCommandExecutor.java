@@ -25,6 +25,7 @@ public class PVPCommandExecutor implements CommandExecutor {
 			if (sender instanceof Player) {
 				Player player = (Player) sender;
 				Bukkit.getScheduler().runTaskLater(PVPManager.getInstance(), new Countdown(player, CountdownType.ENTER, 3), 0L);
+				System.out.println("World guard name: " + plugin.getWorldGuard().getName());
 				return true;
 			} else {
 				sender.sendMessage("You must be a player to do this!");

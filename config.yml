@@ -1,3 +1,7 @@
 spawn:
     world: uhc
     parent: arena
+pearls:
+    enabled: true
+    max-height: 193
+    give-back: true

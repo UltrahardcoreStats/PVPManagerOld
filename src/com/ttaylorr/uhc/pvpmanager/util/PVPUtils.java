@@ -77,7 +77,7 @@ public class PVPUtils {
 	public static boolean isInAABB(Location l1, Location min, Location max) {
 		if (distance(min.getX(), max.getX()) != distance(l1.getX(), min.getX()) + distance(l1.getX(), max.getX())) return false;
 		if (distance(min.getY(), max.getY()) != distance(l1.getY(), min.getY()) + distance(l1.getY(), max.getY())) return false;
-		if (distance(min.getZ(), max.getZ()) != distance(l1.getZ(), min.getZ()) + distance(l1.getZ(), max.getZ())) return false;
+		if (distance(min.getY(), max.getY()) != distance(l1.getY(), min.getY()) + distance(l1.getY(), max.getY())) return false;
 
 		return true;
 	}
